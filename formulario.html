@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Inicio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Barbara Perez</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="acercade.html">Acerca de</a></li>
+            <li><a href="formulario.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h2>Formulario de contacto:</h2>
+        
+        <form id="registroCompleto">
+        <!-- Nombre -->
+        <label for="nombre">Nombre (max. 20 caracteres)</label>
+        <input type="text" id="nombre" name="nombre" maxlength="20" required>
+
+        <!-- Apellido -->
+        <label for="apellido">Apellido (max. 20 caracteres)</label>
+        <input type="text" id="apellido" name="apellido" maxlength="20">
+
+        <!-- Email -->
+        <label for="email">Email *</label>
+        <input type="email" id="email" name="email" required>
+
+        <!-- Teléfono -->
+        <label for="telefono">Teléfono</label>
+        <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su teléfono">
+
+        <!-- Edad -->
+        <label for="edad">Edad (16-120)</label>
+        <input type="number" id="edad" name="edad" min="16" max="120">
+
+        <!-- Dirección -->
+        <label for="direccion">Dirección</label>
+        <textarea id="direccion" name="direccion" rows="3"></textarea>
+
+        <!-- Provincia -->
+        <label for="provincia">Provincia</label>
+        <input list="provincias" id="provincia" name="provincia" placeholder="Seleccione o escriba">
+        <datalist id="provincias">
+            <option value="Río Negro">
+            <option value="Chubut">
+            <option value="Neuquén">
+            <option value="Santa Cruz">
+            <option value="Tierra del Fuego">
+        </datalist>
+
+        <!-- Código Postal -->
+        <label for="codigoPostal">Código Postal (Formato A1234ABC)</label>
+        <input type="text" id="codigoPostal" name="codigoPostal" pattern="[A-Za-z][0-9]{4}[A-Za-z]{3}" placeholder="A1234ABC">
+
+        <fieldset>
+        <legend>Método preferido de contacto:</legend>
+        <input type="radio" id="correoElectronico" name="contacto" value="correoElectronico" checked>
+        <label for="correoElectronico">Correo electrónico</label>
+
+        <input type="radio" id="correoPostal" name="contacto" value="correoPostal">
+        <label for="correoPostal">Correo postal</label>
+
+        <input type="radio" id="telefonoRadio" name="contacto" value="telefono">
+        <label for="telefonoRadio">Teléfono</label>
+        </fieldset>
+
+        <fieldset>
+        <legend>Tipo de suscripción:</legend>
+        <input type="checkbox" id="noticias" name="suscripcion" value="noticias">
+        <label for="noticias">Noticias</label>
+
+        <input type="checkbox" id="promociones" name="suscripcion" value="promociones">
+        <label for="promociones">Promociones</label>
+
+        <input type="checkbox" id="alertas" name="suscripcion" value="alertas" checked>
+        <label for="alertas">Alertas</label>
+
+        <input type="checkbox" id="eventos" name="suscripcion" value="eventos">
+        <label for="eventos">Eventos</label>
+        </fieldset>
+
+        <!-- Botón cargar -->
+        <button type="button">Cargar</button>
+    </form>
+
+    <!-- Tabla vacía -->
+    <table>
+        <tr>
+            <th>Campo</th>
+            <th>Valor</th>
+        </tr>
+        <tr><td>Nombre</td><td></td></tr>
+        <tr><td>Apellido</td><td></td></tr>
+        <tr><td>Email</td><td></td></tr>
+        <tr><td>Teléfono</td><td></td></tr>
+        <tr><td>Edad</td><td></td></tr>
+        <tr><td>Dirección</td><td></td></tr>
+        <tr><td>Provincia</td><td></td></tr>
+        <tr><td>Código Postal</td><td></td></tr>
+        <tr><td>Método preferido de contacto</td><td></td></tr>
+        <tr><td>Tipo de suscripción</td><td></td></tr>
+    </table>
+    
+    </main>
+
+    <footer>
+        <p>© 2025 | Barbara Perez | Universidad Nacional del Comahue | Viedma</p>
+    </footer>
+</body>
+</html>

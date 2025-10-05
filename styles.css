@@ -1,0 +1,193 @@
+/* --------- ESTILO GENERAL --------- */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #050104;
+}
+
+
+h2 {
+    color: #0f011b; /* Cambiá este valor por el color que quieras */
+}
+
+/* --------- HEADER --------- */
+header {
+    background-color: #2f0a36;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* --------- NAVEGACIÓN --------- */
+nav {
+    background-color: #d6b6d6;
+    padding: 0.5rem;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #210127;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* --------- CONTENIDO PRINCIPAL --------- */
+main {
+    padding: 2rem;
+    max-width: 600px;
+    margin: 2rem auto;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    text-align: left;
+}
+
+/* --------- FORMULARIO --------- */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Etiquetas principales */
+label {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Campos de entrada */
+input,
+textarea,
+select,
+datalist {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+/* Radios y checkboxes */
+input[type="radio"],
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 8px;
+}
+
+/* --------- SECCIONES DE OPCIONES (fieldsets) --------- */
+fieldset {
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    padding: 10px 15px 15px;
+    margin-top: 15px;
+    background-color: #fafafa;
+}
+
+legend {
+    font-weight: bold;
+    color: #333;
+    padding: 0 5px;
+}
+
+/* Opciones dentro de los fieldsets */
+fieldset label {
+    display: inline-block;
+    font-weight: normal;
+    margin: 5px 0;
+    color: #666; /* 💡 texto de opciones más clarito */
+}
+
+/* Cada opción (radio o checkbox) en su propia fila */
+fieldset div {
+    display: flex;
+    align-items: center;
+    margin: 4px 0;
+}
+
+/* --------- BOTÓN --------- */
+button {
+    margin-top: 15px;
+    background-color: #5a2d82;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #6c39a3;
+}
+
+/* --------- TABLA --------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 25px;
+}
+th, td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+th {
+    background-color: #eee;
+}
+
+/* --------- FOOTER --------- */
+footer {
+    background-color: #77427e;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+}
+
+/* --------- RESPONSIVIDAD --------- */
+@media (max-width: 600px) {
+    main {
+        padding: 20px;
+        margin: 1rem;
+    }
+    button {
+        width: 100%;
+    }
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px 15px;
+    margin-top: 15px;
+    background-color: #fafafa;
+}
+
+legend {
+    font-weight: bold;
+    color: #000000;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    color: #5a5757;
+}
