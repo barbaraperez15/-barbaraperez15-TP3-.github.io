@@ -8,17 +8,35 @@ body {
     color: #050104;
 }
 
+.pt-sans-narrow-regular {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.pt-sans-narrow-bold {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
 
 h2 {
-    color: #0f011b; /* Cambiá este valor por el color que quieras */
+    color: #250541; 
+    font-family: "PT Sans Narrow", sans-serif;
 }
 
 /* --------- HEADER --------- */
 header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: #2f0a36;
     color: white;
     text-align: center;
     padding: 1rem 0;
+    z-index: 1000;
 }
 
 /* --------- NAVEGACIÓN --------- */
@@ -49,6 +67,16 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+nav {
+    position: fixed;
+    top: 123px; /* aumentamos para que quede debajo del header */
+    left: 0;
+    width: 100%;
+    background-color: #d6b6d6;
+    padding: 0.5rem;
+    z-index: 999;
+}
+
 /* --------- CONTENIDO PRINCIPAL --------- */
 main {
     padding: 2rem;
@@ -58,6 +86,7 @@ main {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     text-align: left;
+    margin-top: 200px;
 }
 
 /* --------- FORMULARIO --------- */
@@ -93,7 +122,7 @@ input[type="checkbox"] {
     margin-right: 8px;
 }
 
-/* --------- SECCIONES DE OPCIONES (fieldsets) --------- */
+/* --------- SECCIONES DE OPCIONES --------- */
 fieldset {
     border: 1px solid #aaa;
     border-radius: 5px;
@@ -113,7 +142,7 @@ fieldset label {
     display: inline-block;
     font-weight: normal;
     margin: 5px 0;
-    color: #666; /* 💡 texto de opciones más clarito */
+    color: #666; 
 }
 
 /* Cada opción (radio o checkbox) en su propia fila */
@@ -190,4 +219,81 @@ legend {
 input[type="radio"] + label,
 input[type="checkbox"] + label {
     color: #5a5757;
+}
+
+/* --------- TÍTULO CON LOGO --------- */
+.titulo-con-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* centra el título y el logo juntos */
+    gap: 15px; /* espacio entre texto y logo */
+}
+
+.logo-curza {
+    width: 80px; /* ajustá el tamaño según tu logo */
+    height: auto;
+    animation: girarLogo 3s ease-in-out 1; /* animación de 3 segundos */
+    transform-style: preserve-3d; /* para giro 3D */
+}
+
+/* Animación de giro */
+@keyframes girarLogo {
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(180deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+.foto-personal {
+    width: 100%;           /* ocupa todo el ancho disponible del contenedor */
+    max-width: 600px;      /* pero nunca más grande de 600px */
+    height: auto;          /* mantiene la proporción original */
+    display: block;
+    margin: 0 auto 20px;   /* centrada y con espacio abajo */
+    border-radius: 10px;   /* opcional, para esquinas redondeadas */
+}
+
+.sobre-mi {
+    max-height: 300px;
+    overflow-y: auto; /* agrega barra de desplazamiento si el texto supera el alto */
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #fafafa;
+}
+
+/* Primera línea fija */
+.sticky-linea {
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    padding: 5px;
+    font-weight: bold;
+    border-bottom: 2px solid #ccc;
+}
+
+.flecha-arriba {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #21043a;
+    color: white;
+    font-size: 24px;
+    text-decoration: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s;
+    z-index: 1000;
+}
+.flecha-arriba:hover {
+    background-color: #ba98df;
 }
