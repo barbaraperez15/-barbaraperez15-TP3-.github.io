@@ -3,12 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
+    <title>Página de Inicio</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <h1>Barbara Perez</h1>
+        <div class="titulo-con-logo">
+            <h1>Barbara Perez</h1>
+            <img src="imagen_circular_recortada.png" alt="Logo CURZA" class="logo-curza">
+        </div>
     </header>
 
     <nav>
@@ -32,7 +38,7 @@
         <input type="text" id="apellido" name="apellido" maxlength="20">
 
         <!-- Email -->
-        <label for="email">Email</label>
+        <label for="email">Email *</label>
         <input type="email" id="email" name="email" required>
 
         <!-- Teléfono -->
@@ -95,10 +101,14 @@
 
     <!-- Tabla vacía -->
     <table>
+    <thead>
         <tr>
             <th>Campo</th>
             <th>Valor</th>
         </tr>
+    </thead>
+
+    <tbody>
         <tr><td>Nombre</td><td></td></tr>
         <tr><td>Apellido</td><td></td></tr>
         <tr><td>Email</td><td></td></tr>
@@ -109,6 +119,7 @@
         <tr><td>Código Postal</td><td></td></tr>
         <tr><td>Método preferido de contacto</td><td></td></tr>
         <tr><td>Tipo de suscripción</td><td></td></tr>
+    </tbody>
     </table>
     
     </main>
@@ -116,7 +127,7 @@
     <footer>
         <p>© 2025 | Barbara Perez | Universidad Nacional del Comahue | Viedma</p>
     </footer>
+
+    <a href="#" class="flecha-arriba" title="Volver arriba">↑</a>
 </body>
-
 </html>
-
