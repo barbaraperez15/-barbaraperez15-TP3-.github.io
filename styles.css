@@ -9,16 +9,17 @@ body {
 }
 
 .pt-sans-narrow-regular {
-    font-family: "PT Sans Narrow", sans-serif;
-    font-weight: 400;
-    font-style: normal;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
 .pt-sans-narrow-bold {
-    font-family: "PT Sans Narrow", sans-serif;
-    font-weight: 700;
-    font-style: normal;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 700;
+  font-style: normal;
 }
+
 
 h2 {
     color: #250541; 
@@ -40,14 +41,9 @@ header {
 
 /* --------- NAVEGACIÓN --------- */
 nav {
-    position: fixed;
-    top: 100%; /* justo debajo del header */
-    left: 0;
-    width: 100%;
     background-color: #d6b6d6;
-    padding: 0.5rem 0;
-    z-index: 1010; /* mayor que header y main */
-
+    padding: 0.5rem;
+}
 
 nav ul {
     list-style: none;
@@ -71,16 +67,26 @@ nav ul li a:hover {
     text-decoration: underline;
 }
 
+nav {
+    position: fixed;
+    top: 123px; /* aumentamos para que quede debajo del header */
+    left: 0;
+    width: 100%;
+    background-color: #d6b6d6;
+    padding: 0.5rem;
+    z-index: 999;
+}
+
 /* --------- CONTENIDO PRINCIPAL --------- */
 main {
     padding: 2rem;
     max-width: 600px;
-    margin: 0 auto;
-    padding-top: 260px; /* espacio para header + nav */
+    margin: 2rem auto;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
     text-align: left;
+    margin-top: 200px;
 }
 
 /* --------- FORMULARIO --------- */
@@ -90,12 +96,17 @@ form {
     gap: 10px;
 }
 
+/* Etiquetas principales */
 label {
     font-weight: bold;
     margin-top: 10px;
 }
 
-input, textarea, select, datalist {
+/* Campos de entrada */
+input,
+textarea,
+select,
+datalist {
     width: 100%;
     padding: 8px;
     border: 1px solid #ccc;
@@ -104,7 +115,9 @@ input, textarea, select, datalist {
     box-sizing: border-box;
 }
 
-input[type="radio"], input[type="checkbox"] {
+/* Radios y checkboxes */
+input[type="radio"],
+input[type="checkbox"] {
     width: auto;
     margin-right: 8px;
 }
@@ -124,13 +137,15 @@ legend {
     padding: 0 5px;
 }
 
+/* Opciones dentro de los fieldsets */
 fieldset label {
     display: inline-block;
     font-weight: normal;
     margin: 5px 0;
-    color: #666;
+    color: #666; 
 }
 
+/* Cada opción (radio o checkbox) en su propia fila */
 fieldset div {
     display: flex;
     align-items: center;
@@ -149,7 +164,6 @@ button {
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
-
 button:hover {
     background-color: #6c39a3;
 }
@@ -160,13 +174,11 @@ table {
     border-collapse: collapse;
     margin-top: 25px;
 }
-
 th, td {
     border: 1px solid #ccc;
     padding: 8px;
     text-align: left;
 }
-
 th {
     background-color: #eee;
 }
@@ -180,46 +192,81 @@ footer {
     margin-top: 2rem;
 }
 
+/* --------- RESPONSIVIDAD --------- */
+@media (max-width: 600px) {
+    main {
+        padding: 20px;
+        margin: 1rem;
+    }
+    button {
+        width: 100%;
+    }
+}
+
+fieldset {
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    padding: 10px 15px;
+    margin-top: 15px;
+    background-color: #fafafa;
+}
+
+legend {
+    font-weight: bold;
+    color: #000000;
+}
+
+input[type="radio"] + label,
+input[type="checkbox"] + label {
+    color: #5a5757;
+}
+
 /* --------- TÍTULO CON LOGO --------- */
 .titulo-con-logo {
     display: flex;
     align-items: center;
-    justify-content: center;
-    gap: 15px;
+    justify-content: center; /* centra el título y el logo juntos */
+    gap: 15px; /* espacio entre texto y logo */
 }
 
 .logo-curza {
-    width: 80px;
+    width: 80px; /* ajustá el tamaño según tu logo */
     height: auto;
-    animation: girarLogo 3s ease-in-out 1;
-    transform-style: preserve-3d;
+    animation: girarLogo 3s ease-in-out 1; /* animación de 3 segundos */
+    transform-style: preserve-3d; /* para giro 3D */
 }
 
+/* Animación de giro */
 @keyframes girarLogo {
-    0% { transform: rotateY(0deg); }
-    50% { transform: rotateY(180deg); }
-    100% { transform: rotateY(360deg); }
+    0% {
+        transform: rotateY(0deg);
+    }
+    50% {
+        transform: rotateY(180deg);
+    }
+    100% {
+        transform: rotateY(360deg);
+    }
 }
 
-/* --------- IMAGEN RESPONSIVA --------- */
 .foto-personal {
-    width: 100%;
-    max-width: 600px;
-    height: auto;
+    width: 100%;           /* ocupa todo el ancho disponible del contenedor */
+    max-width: 600px;      /* pero nunca más grande de 600px */
+    height: auto;          /* mantiene la proporción original */
     display: block;
-    margin: 0 auto 20px;
-    border-radius: 10px;
+    margin: 0 auto 20px;   /* centrada y con espacio abajo */
+    border-radius: 10px;   /* opcional, para esquinas redondeadas */
 }
 
-/* --------- SOBRE MÍ CON SCROLL --------- */
 .sobre-mi {
     max-height: 300px;
-    overflow-y: auto;
+    overflow-y: auto; /* agrega barra de desplazamiento si el texto supera el alto */
     border: 1px solid #ccc;
     padding: 10px;
     background-color: #fafafa;
 }
 
+/* Primera línea fija */
 .sticky-linea {
     position: sticky;
     top: 0;
@@ -229,7 +276,6 @@ footer {
     border-bottom: 2px solid #ccc;
 }
 
-/* --------- FLECHA ARRIBA --------- */
 .flecha-arriba {
     position: fixed;
     bottom: 20px;
@@ -248,37 +294,6 @@ footer {
     transition: background-color 0.3s;
     z-index: 1000;
 }
-
 .flecha-arriba:hover {
     background-color: #ba98df;
 }
-
-/* --------- RESPONSIVIDAD CELULAR --------- */
-@media (max-width: 600px) {
-    header {
-        padding: 0.5rem 0;
-    }
-
-    nav {
-        top: 100%; /* debajo del header */
-    }
-
-    main {
-        padding-top: 200px; /* header + nav más chicos en móvil */
-    }
-
-    .titulo-con-logo {
-        flex-direction: column;
-        gap: 5px;
-    }
-
-    .logo-curza {
-        width: 60px;
-    }
-
-    .foto-personal {
-        max-width: 100%;
-    }
-}
-
-
