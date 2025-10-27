@@ -297,3 +297,27 @@ input[type="checkbox"] + label {
 .flecha-arriba:hover {
     background-color: #ba98df;
 }
+
+/* --------- AJUSTE PARA CELULARES --------- */
+@media (max-width: 600px) {
+    header {
+        padding: 0.5rem 0; /* hace más chico el header */
+    }
+
+    nav {
+        top: 90px; /* antes 110px — lo subimos para pantallas chicas */
+    }
+
+    main {
+        margin-top: 180px; /* más espacio para que no quede tapado */
+    }
+
+    .titulo-con-logo {
+        flex-direction: column; /* el texto y logo uno arriba del otro */
+        gap: 5px;
+    }
+
+    .logo-curza {
+        width: 60px; /* más chico para celular */
+    }
+}
