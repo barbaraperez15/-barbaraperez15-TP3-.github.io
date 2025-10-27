@@ -76,7 +76,7 @@ main {
     padding: 2rem;
     max-width: 600px;
     margin: 0 auto;
-    margin-top: 220px; /* header + nav */
+    padding-top: 220px; /* espacio para header + nav */
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -260,11 +260,11 @@ footer {
     }
 
     nav {
-        top: 90px;
+        top: 80px; /* ajusta según la altura real del header en móvil */
     }
 
     main {
-        margin-top: 150px;
+        padding-top: 160px; /* menos espacio porque header + nav son más chicos */
     }
 
     .titulo-con-logo {
@@ -280,4 +280,5 @@ footer {
         max-width: 100%;
     }
 }
+
 
