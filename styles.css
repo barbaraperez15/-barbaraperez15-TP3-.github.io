@@ -41,13 +41,13 @@ header {
 /* --------- NAVEGACIÓN --------- */
 nav {
     position: fixed;
-    top: 120px; /* altura aproximada del header */
+    top: 100%; /* justo debajo del header */
     left: 0;
     width: 100%;
     background-color: #d6b6d6;
     padding: 0.5rem 0;
-    z-index: 999;
-}
+    z-index: 1010; /* mayor que header y main */
+
 
 nav ul {
     list-style: none;
@@ -76,7 +76,7 @@ main {
     padding: 2rem;
     max-width: 600px;
     margin: 0 auto;
-    padding-top: 220px; /* espacio para header + nav */
+    padding-top: 260px; /* espacio para header + nav */
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
@@ -260,11 +260,11 @@ footer {
     }
 
     nav {
-        top: 80px; /* ajusta según la altura real del header en móvil */
+        top: 100%; /* debajo del header */
     }
 
     main {
-        padding-top: 160px; /* menos espacio porque header + nav son más chicos */
+        padding-top: 200px; /* header + nav más chicos en móvil */
     }
 
     .titulo-con-logo {
