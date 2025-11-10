@@ -260,10 +260,11 @@ input[type="checkbox"] + label {
 
 .sobre-mi {
     max-height: 300px;
-    overflow-y: auto; /* agrega barra de desplazamiento si el texto supera el alto */
+    overflow-y: auto;
     border: 1px solid #ccc;
-    padding: 10px;
+    padding: 0px 10px 10px; 
     background-color: #fafafa;
+    border-radius: 8px;
 }
 
 /* Primera línea fija */
@@ -274,6 +275,7 @@ input[type="checkbox"] + label {
     padding: 5px;
     font-weight: bold;
     border-bottom: 2px solid #ccc;
+    z-index: 5;
 }
 
 .flecha-arriba {
