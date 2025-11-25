@@ -22,6 +22,7 @@
             <li><a href="index.html">Inicio</a></li>
             <li><a href="acercade.html">Acerca de</a></li>
             <li><a href="formulario.html">Contacto</a></li>
+            <li><a href="juego.html">Juego</a></li>
         </ul>
     </nav>
 
@@ -39,7 +40,10 @@
 
         <!-- Email -->
         <label for="email">Email *</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" required
+        pattern="^[^@]+@[^@]+\.[a-zA-Z]{2,}$"
+        title="Debe incluir un @ y al menos un punto.">
+
 
         <!-- Teléfono -->
         <label for="telefono">Teléfono</label>
