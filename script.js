@@ -1,5 +1,5 @@
 // Seleccionar inputs y textarea
-const inputs = document.querySelectorAll("#registroCompleto input, #registroCompleto textarea");
+const campos = document.querySelectorAll("#registroCompleto input, #registroCompleto textarea");
 
 // Seleccionar celdas de la tabla (última columna de cada fila)
 const filasTabla = document.querySelectorAll("tbody tr td:last-child");
@@ -25,8 +25,15 @@ function actualizarTabla() {
     filasTabla[9].textContent = listaSuscripciones.join(", ");
 }
 
-// Escuchar cambios en todos los campos
-inputs.forEach(campo => {
+// Aplicar validación automática al perder el foco (blur)
+campos.forEach(campo => {
+    campo.addEventListener("blur", () => {
+        if (!campo.checkValidity()) {
+            campo.reportValidity(); // Muestra mensaje del navegador
+        }
+    });
+
+    // Y también actualizar la tabla cuando cambie
     campo.addEventListener("input", actualizarTabla);
     campo.addEventListener("change", actualizarTabla);
 });
