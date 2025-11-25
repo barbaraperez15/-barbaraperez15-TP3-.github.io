@@ -300,6 +300,39 @@ input[type="checkbox"] + label {
     background-color: #ba98df;
 }
 
+/* ========= ESTILO EXCLUSIVO PARA EL JUEGO ========= */
+
+.opcion-btn {
+    display: block;               /* cada botón en su propia línea */
+    width: 100%;                  /* que ocupen todo el ancho */
+    margin: 10px 0;               /* separación entre botones */
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+}
+
+/* Colores distintos para cada opción */
+.opcion-btn:nth-child(1) {
+    background-color: #ad4444;  /* violeta */
+}
+.opcion-btn:nth-child(2) {
+    background-color: #3498db;  /* azul */
+}
+.opcion-btn:nth-child(3) {
+    background-color: #e67e22;  /* naranja */
+}
+.opcion-btn:nth-child(4) {
+    background-color: #27ae60;  /* verde */
+}
+
+.opcion-btn:hover {
+    opacity: 0.9;
+}
+
 
 
 
